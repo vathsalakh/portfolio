@@ -1,10 +1,12 @@
-/* Import Google Font */
+/* General Styles */
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #0d1117;
-    color: #ffffff;
     margin: 0;
     padding: 0;
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364); /* Stylish Gradient */
+    color: #fff;
+    text-align: center;
+    padding-top: 80px; /* Prevents content from being overlapped by the fixed header */
 }
 
 /* Header */
@@ -12,66 +14,194 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
-    background: #161b22;
+    padding: 15px 50px;
+    background: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
 }
 
 .logo {
     font-size: 24px;
     font-weight: 700;
-    color: #58a6ff;
+}
+
+.logo span {
+    color: #00c3ff;
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 30px; /* Increased gap to prevent overlap */
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
 }
 
 nav ul li a {
+    color: #fff;
     text-decoration: none;
-    color: #ffffff;
+    font-weight: 500;
     font-size: 18px;
+    padding: 10px 15px; /* Better spacing */
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #00c3ff;
 }
 
 /* Hero Section */
 #hero {
-    text-align: center;
-    padding: 100px 20px;
-    background: #0d1117;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
 }
 
 .highlight {
-    color: #58a6ff;
+    color: #00c3ff;
 }
 
 .btn {
-    display: inline-block;
-    margin-top: 20px;
+    background: #00c3ff;
+    color: white;
     padding: 10px 20px;
-    background: #58a6ff;
-    color: #ffffff;
-    text-decoration: none;
+    border: none;
     border-radius: 5px;
+    text-decoration: none;
+    margin-top: 10px;
+    transition: background 0.3s ease;
 }
 
-/* Projects */
-#projects {
-    padding: 50px;
+.btn:hover {
+    background: #0086b3;
+}
+
+/* Sections */
+section {
+    padding: 80px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
 }
 
+#about, #projects, #contact {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 50px;
+    border-radius: 10px;
+    margin: 30px auto;
+    width: 80%;
+}
+
+/* Projects */
 .project {
-    background: #161b22;
-    padding: 20px;
-    margin: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 15px;
+    margin: 10px;
+    border-radius: 8px;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.project:hover {
+    transform: scale(1.05);
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Contact */
+#contact a {
+    color: #00c3ff;
+    text-decoration: none;
+}
+
+#contact a:hover {
+    text-decoration: underline;
+}
+
+#contact h3 {
+    font-size: 28px; /* Increased font size */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+    width: 40%; /* Further reduced width */
+    margin: 0 auto; /* Center the form */
+}
+
+label {
+    font-weight: bold;
+    text-align: left; /* Align labels to the left */
+}
+
+input, textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
     border-radius: 5px;
+    font-size: 16px;
+    width: 100%; /* Ensure inputs take full width of the form */
+}
+
+button[type="submit"] {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #00c3ff;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #0086b3;
 }
 
 /* Footer */
 footer {
-    text-align: center;
-    padding: 20px;
-    background: #161b22;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.7);
     margin-top: 20px;
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+table {
+    width: 100%;
+    margin: 20px 0;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+th {
+    background-color: #00c3ff;
+    color: white;
+}
+
+td {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.contact-button {
+    visibility: visible;
+    display: block;
 }

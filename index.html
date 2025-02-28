@@ -21,13 +21,42 @@
 
     <section id="hero">
         <h1>Hi, I'm <span class="highlight">Vathsala</span></h1>
-        <p>A Web Developer passionate about building interactive experiences.</p>
+        <p>A Full stack Web Developer passionate about building interactive experiences.</p>
         <a href="#projects" class="btn">View My Work</a>
     </section>
 
     <section id="about">
         <h2>About Me</h2>
-        <p>Hi! I'm Vathsala, a web developer passionate about building interactive experience.</p>
+        
+        <p> Hi, I'm Vathsala, an aspiring full-stack developer with a passion for problem-solving and creating impactful digital experiences</p>
+        
+        <h3>Skills</h3>
+        <table>
+            <tr>
+                <th>HTML</th>
+                <th>CSS</th>
+                <th>PHP</th>
+                <th>JavaScript</th>
+            </tr>
+            <tr>
+                <td>Semantic HTML</td>
+                <td>Flexbox</td>
+                <td>Laravel</td>
+                <td>ES6+</td>
+            </tr>
+            <tr>
+                <td>Forms</td>
+                <td>Grid</td>
+                <td>WordPress</td>
+                <td>React</td>
+            </tr>
+            <tr>
+                <td>SEO</td>
+                <td>Animations</td>
+                <td>APIs</td>
+                <td>Node.js</td>
+            </tr>
+        </table>
     </section>
 
     <section id="projects">
@@ -43,6 +72,21 @@
     </section>
 
     <section id="contact">
+        <h3>Contact Form</h3>
+        <p>For any inquiries, please fill out the form below:</p>
+        <form id="contact-form" action="contact-form-handler.php" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="description">Problem Description (maximum 30 words):</label>
+            <textarea id="description" name="description" required></textarea>
+            
+            <button type="submit">Submit</button>
+        </form>
+
         <h2>Contact Me</h2>
         <p>Email: vathsala.kh@gmail.com</p>
         <p>LinkedIn: <a href="https://www.linkedin.com/in/vathsala-k/" target="_blank">Visit My LinkedIn</a></p>
@@ -53,6 +97,20 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        document.getElementById('close-projects-btn').addEventListener('click', function() {
+            document.getElementById('projects').style.display = 'none';
+        });
+
+        document.getElementById('toggle-contact-form-btn').addEventListener('click', function() {
+            var contactForm = document.getElementById('contact-form');
+            if (contactForm.style.display === 'none' || contactForm.style.display === '') {
+                contactForm.style.display = 'block';
+            } else {
+                contactForm.style.display = 'none';
+            }
+        });
+    </script>
 </body>
 </html>
 
