@@ -181,24 +181,34 @@ html {
 }
 
 table {
-    width: 100%;
-    margin: 20px 0;
+    width: 80%;
+    margin: 20px auto; /* Center the table */
     border-collapse: collapse;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 th, td {
-    padding: 10px;
-    border: 1px solid #ddd;
+    padding: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
     text-align: center;
+    color: #fff;
 }
 
 th {
     background-color: #00c3ff;
     color: white;
+    font-weight: 700;
 }
 
 td {
     background-color: rgba(255, 255, 255, 0.1);
+    font-weight: 500;
+}
+
+tr:nth-child(even) td {
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 .contact-button {
